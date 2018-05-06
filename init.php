@@ -12,6 +12,8 @@ $mysqli = new mysqli(
     $database['database']
 );
 
+$mysqli->query("SET NAMES utf8;");
+
 if($mysqli->connect_error) {
     die('mysql error: ' . $mysqli->connect_errno);
 }
